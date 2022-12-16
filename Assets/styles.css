@@ -1,7 +1,31 @@
-/* body {
-    background-color: aquamarine;
-} */  /* testing to see if everything works. Yes it does */
+*,
+*::before,
+*::after { 
+	box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
+
+body {
+    
+    background-color: aquamarine;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+} 
+
+.container-box-shell { /*NOT WORKING, actually this whole block isn't working. start by figuring out how to isolate h1 from this block, as right now, nothing is being centered on page*/
+    align-items: center;
+    background-color: antiquewhite; 
+    display: flex;
+    justify-content: center;
+
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+}
 /* pseudo code:
 
 3 steps:

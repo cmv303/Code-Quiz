@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Quiz</title>
-    <link href="./Assets/styles.css" rel="stylesheet">
+    <link href="./Assets/styles.css" rel="stylesheet" />
     <script src="./Assets/script.js" defer></script>
 </head>
+
 <body>
-    <h1> Code Quiz</h1>
+    <main class="outer-container timer win-or-lose">
+        <h1>Code Quiz</h1>
+    </main>
+    
+    <div class="cointainter-box-shell" id="containter-box-shell">
+        <h2>Welcome to the Game!</h2>
+        <div class="hide-question" id="question-prompt">HERE'S THE QUESTION
+        </div>
+        
+        <div class="answer-btn-grid" id="answer-btns">
+        <button class="btn">answer 1</button>
+        <button class="btn">answer 2</button>
+        <button class="btn">answer 3</button>
+        <button class="btn">answer 4</button>
+        </div>
+
+        <div class="utlity-buttons">
+            <button class="start-button hide-start" id="start-game" >Start</button>
+            <button class="next-button hide" id="next-question" >Next</button>
+        </div>
+    </div>
 </body>
 </html>
-
-
-
 
 <!--
 pseudo code:
