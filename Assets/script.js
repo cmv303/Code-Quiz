@@ -1,5 +1,8 @@
 // console.log("hi Hi HI") //* testing to see if everything works. Yes it does
 
+const question = document.getElementById("question-prompt");
+const answers = Array.from(document.getElementsByClassName("answer-choices"));
+
 
 // pseudo code:
 

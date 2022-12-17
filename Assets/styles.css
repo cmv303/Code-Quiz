@@ -1,31 +1,97 @@
+/* Box Sizing */
 *,
-*::before,
-*::after { 
-	box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* General */
+html {
+  font-size: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 
 body {
-    
-    background-color: aquamarine;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-} 
-
-.container-box-shell { /*NOT WORKING, actually this whole block isn't working. start by figuring out how to isolate h1 from this block, as right now, nothing is being centered on page*/
-    align-items: center;
-    background-color: antiquewhite; 
-    display: flex;
-    justify-content: center;
-
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
+  background-color: aquamarine;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
 }
+
+/* Main */
+.cointainter-box-shell > * {
+  align-items: center; /*can't get this to work */
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center; /*can't get this to work */
+  padding: 0;
+  margin: 0;
+}
+
+.cointainter-box-shell {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Buttons */
+
+.btn {
+  background-color: rgb(241, 232, 222);
+  border: 0.17em solid rgb(106, 103, 98);
+  border-radius: 0.25em;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 3s;
+  background-color: burlywood;
+}
+
+/* 
+.answer-btn-grid {
+
+} */
+
+/* .utlity-buttons {
+  margin: 3rem;
+  padding: 3rem;
+} */
+
+/* .start-button {
+ 
+} */
+
+/* .next-button {
+ 
+} */
+
+
+/* Show + Hide */
+
+/* .hide-next {
+ 
+} */
+
+/* .hide-start {
+    display: none;
+} */
+
+/* .hide-question {
+    display: none;
+} */
+
+
+
+
 /* pseudo code:
 
 3 steps:

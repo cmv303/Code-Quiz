@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <link href="./Assets/styles.css" rel="stylesheet" />
+    <link href="./Assets/styles.css" rel="stylesheet">
     <script src="./Assets/script.js" defer></script>
 </head>
 
 <body>
-    <main class="outer-container timer win-or-lose">
-        <h1>Code Quiz</h1>
-    </main>
-    
-    <div class="cointainter-box-shell" id="containter-box-shell">
-        <h2>Welcome to the Game!</h2>
-        <div class="hide-question" id="question-prompt">HERE'S THE QUESTION
+    <header>
+        <h1 class="h1-title">CODE QUIZ</h1>
+    </header>
+
+    <main id="containter-box-shell" class="cointainter-box-shell timer tracker">Welcome To The Game!
+
+        <div id="question-prompt" class="hide-question">Here's the quesion
         </div>
-        
-        <div class="answer-btn-grid" id="answer-btns">
-        <button class="btn">answer 1</button>
-        <button class="btn">answer 2</button>
-        <button class="btn">answer 3</button>
-        <button class="btn">answer 4</button>
+
+        <div id="answer-choices" class="answer-btn-grid">
+            <button class="btn" data-number="1">answer 1</button>
+            <button class="btn" data-number="2">answer 2</button>
+            <button class="btn" data-number="3">answer 3</button>
+            <button class="btn" data-number="4">answer 4</button>
         </div>
 
         <div class="utlity-buttons">
-            <button class="start-button hide-start" id="start-game" >Start</button>
-            <button class="next-button hide" id="next-question" >Next</button>
+            <button id="start-game" class="start-button btn hide-start">Start</button>
+            <button id="next-question" class="next-button btn hide-next">Next</button>
         </div>
-    </div>
+    </main>
 </body>
 </html>
 
@@ -42,31 +42,40 @@ initialize game, play game, end of game
 
 
 initialize game:
-In main body/outer container: I want a timer (should this give you a time limit that works with WHOLE QUIZ.
+In main body/outer container: I want a timer JSS (should this give you a time limit that works with WHOLE QUIZ.
 I want a win/loss tracker
 
 
 play game:
+CSS
 I want a box with 4 possible questions, each encased in their own box that you can click which will submit that as the answer.
 
-There should be a hover effect and a before/after that changes colors when clicked. Think about using the keydown method.
-
-All questions should appear in a random order using the Math.random() method
-
-The larger box should have:
-
+CSS
 I want a button that says START GAME that should be hidden after pressing
 
+CSS
 I want a button that says NEXT QUESTION that should be hidden UNTIL starting game.
+
+CSS
+There should be a hover effect and a before/after that changes colors when clicked. Think about using the keydown method.
+
+JS
+All questions should appear in a random order using the Math.random() method
 
 
 end of game:
+CSS AND JS
+I want a button (CSS) that says CLEAR HIGH SCORES (JS)
+
+CSS OR JS (UNSURE)
+I want the START GAME button to also appear here to iniitalize another new game. that means, go back to SHOW.
+
+JS
 when game finishes an alert stating ALL DONE should appear along your final score and a prompt for you to input your initials. final score and initials should be kept using the localStorage method.
 
-I want a button that says CLEAR HIGH SCORES
+JSS
 I want my timer to stop counting
 
-I want a button the START GAME button to also appear here to iniitalize another new game. that means, go back to SHOW.
-
+JS
 I want my timer to reset
 -->
