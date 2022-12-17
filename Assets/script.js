@@ -2,6 +2,12 @@
 
 const question = document.getElementById("question-prompt");
 const answers = Array.from(document.getElementsByClassName("answer-choices"));
+// console.log(answers); Not working as intended...does not show data-set numbers or number within array. Tried adding the same id to all 4 buttons, but that also did not work
+
+
+
+
+
 
 
 // pseudo code:
