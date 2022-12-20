@@ -1,8 +1,8 @@
-// console.log("hi Hi HI") //* testing to see if everything works. Yes it does
+console.log("hi Hi HI") //testing to see if everything works. Yes it does
 
 const question = document.getElementById("question-prompt");
-const answers = Array.from(document.getElementsByClassName("answer-choices"));
-// console.log(answers); Not working as intended...does not show data-set numbers or number within array. Tried adding the same id to all 4 buttons, but that also did not work
+const answers = Array.from(document.querySelectorAll(".ans-btn"));
+console.log(answers); //check to make sure it's working 
 
 
 
@@ -17,7 +17,7 @@ const answers = Array.from(document.getElementsByClassName("answer-choices"));
 
 
 // initialize game:
-// In main body/outer container: I want a timer (should this give you a time limit that works with WHOLE QUIZ.
+// In main body/outer container: I want a timer (this should give you a time limit that works with WHOLE QUIZ.
 // I want a win/loss tracker
 
 
