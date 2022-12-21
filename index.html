@@ -12,12 +12,20 @@
 <body>
     <header>
         <h1 class="h1-title">CODE QUIZ</h1>
-        <h3>Welcome To The Game!</h3>
+        <h4>View High Scores</h4>
     </header>
 
-    <article id="containter-box-shell" class="cointainter-box-shell timer tracker">
+    <section class="timer wrapper" id="count-down">
+        Time Left
+    </section>
+
+    <article id="containter-box-shell" class="quiz-container">
         <section id="question-prompt" class="hide-question">
-            <p>Here's the question</p>
+            <p>Commonly used data types do NOT include ____.</p>
+            <p>The condition in an if/else statement is enclosed with ____.</p>
+            <p>Arrays in JavaScript can be used to store ____.</p>
+            <p>String values must be enclosed within ____ when being assigned to variables.</p>
+            <p>A very useful tool  for printing content to the debugger during development and debugging is ____.</p>
         </section>
 
         <section id="answer-choices" class="answer-btn-grid">
@@ -28,10 +36,19 @@
         </section>
 
         <section class="utlity-buttons">
-            <button id="start-game" class="start-button btn hide-start">Start</button>
-            <button id="next-question" class="next-button btn hide-next">Next</button>
+            <button id="start-game" class="start-btn btn hide-start">Start</button>
+            <button id="next-question" class="next-btn btn hide-next">Next</button>
         </section>
+
+        <aside class="tracker">
+            Wins & Losses
+        </aside>
+
     </article>
+    <footer class="score-keeper high-score" id="scoreboard">
+        You scored 0/100% <!-- this should be a math JS equation. Are both class names needed? -->
+        <button class="play-again hide-play-again btn">play again?</button>
+    </footer>
 </body>
 </html>
 
@@ -49,7 +66,7 @@ I want a win/loss tracker
 
 play game:
 CSS
-I want a box with 4 possible questions, each encased in their own box that you can click which will submit that as the answer.
+I want a box with 4 possible answers, each encased in their own box that you can click which will submit that as the answer.
 
 CSS
 I want a button that says START GAME that should be hidden after pressing

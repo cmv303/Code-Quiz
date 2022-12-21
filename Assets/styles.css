@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: aquamarine;
+  background-color: #9DA9A0;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -28,17 +28,36 @@ body {
 }
 
 /* Main */
-.cointainter-box-shell {
-  align-items: center;
-  background-color: antiquewhite;
+.wrapper {
+  /* ! not working */
+  background-color: rgb(221, 211, 198);
   border-radius: 5px;
   display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  max-width: 960px;
+  max-height: 550px;
+  padding: 5px;
+  width: fit-content;
+  block-size: fit-content;
+}
+
+.quiz-container {
+  background-color: rgb(221, 211, 198);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
   justify-content: center;
   padding: 0;
-  margin: 0;
+  margin: 10em; /* ! this is not centered on the page */
   gap: 1rem;
-  height: 50%; 
-  width: 35vh; /* what is the difference btwn % an vw in this case? why does it make such a big difference, in other words? */
+  height: 65%;
+  width: 100vh;
+}
+
+p {
+   /*! need to figure out how 2 turn into rows */
+  margin: 1em;
 }
 
 /* Buttons */
@@ -67,11 +86,11 @@ body {
   padding: 3rem;
 } */
 
-/* .start-button {
+/* .start-btn {
  
 } */
 
-/* .next-button {
+/* .next-btn {
  
 } */
 
@@ -89,6 +108,8 @@ body {
     display: none;
 } */
 
+
+
 /* pseudo code:
 
 3 steps:
@@ -96,30 +117,66 @@ initialize game, play game, end of game
 
 
 initialize game:
-In main body/outer container: I want a timer (should this give you a time limit that works with WHOLE QUIZ.
-I want a win/loss tracker
+CS
+I want a start button that begins
+
+JS
+Timer Countdown to start
+
+JS
+First Question to appear
 
 
 play game:
-I want a box with 4 possible questions, each encased in their own box that you can click which will submit that as the answer.
+CSS
+✅I want a box with 4 possible answers, each encased in their own box that you can 
 
-There should be a hover effect and a before/after that changes colors when clicked. Think about using the keydown method.
+JS
+click which will submit that as the answer.
 
+CSS
+✅I want a button that says START GAME that should 
+
+JS
+be hidden after pressing
+
+CSS
+✅I want a button that says NEXT QUESTION that should
+
+JS
+be hidden UNTIL starting game.
+
+CSS
+✅There should be a hover effect
+
+CSS
+and a before and after that changes colors
+
+JS
+when clicked. Think about using the keydown method.
+
+JS
 All questions should appear in a random order using the Math.random() method
-
-The larger box should have:
-
-I want a button that says START GAME that should be hidden after pressing
-
-I want a button that says NEXT QUESTION that should be hidden UNTIL starting game.
 
 
 end of game:
-when game finishes an alert stating ALL DONE should appear along your final score and a prompt for you to input your initials. final score and initials should be kept using the localStorage method.
+JS
+an alert stating ALL DONE should appear
 
-I want a button that says CLEAR HIGH SCORES
+JS
+and prompt you to input your initials. (final score and initials should be kept using the localStorage method.)
+
+JS
 I want my timer to stop counting
 
-I want a button the START GAME button to also appear here to iniitalize another new game. that means, go back to SHOW.
+CSS
+I want a win/loss tracker
 
-I want my timer to reset */
+JS
+that keeps score
+
+CSS
+✅I want a button (CSS) that Play Again? that 
+
+JS
+if clicked Will cause my timer to reset */
