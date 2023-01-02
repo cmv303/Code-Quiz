@@ -1,11 +1,14 @@
-console.log("hi Hi HI") //tests to see if everything works. Yes it does
+console.log("hi Hi HI") 
+//tests to see if everything works. Yes it does
 
 const startGame = document.querySelectorAll(".start-btn")
 
 const question = document.getElementById("question-prompt");
 const currentQuestion
-//? is this necesssary, or is const question enough? //
+//? is this necesssary, or is const question enough?// //
+//*This should be enough if all questions are placed here in an array//
 const rndQueston
+//?This const rndQuestion may not be necessary if I do the array above. Have to see....//
 
 const answers = Array.from(document.querySelectorAll(".ans-btn"));
 console.log(answers); //checks to make sure it's working
@@ -13,51 +16,106 @@ const correctAnswer
 const incorrectAnswer
 //? is this necessary, or is const answers enough? or, should i change const answers to const possibleAnswers ? //
 
-const timer = document.querySelectorAll(".timer") //countsdown from 1 minute at start of game
-const timerReset //resets if Play Again is activated
+const countDown = document.querySelectorAll(".timer")
+//countsdown from 1 minute at start of game
+const timerReset
+//resets if Play Again is activated
 //*this will be declared within function //
-const tracker = document.querySelectorAll(".tracker") //keeps track of # of wins and losses
-const highScore = document.querySelectorAll(".high-score") //keeps track of User's high score
+const tracker = document.querySelectorAll(".tracker")
+//keeps track of # of wins and losses
+const highScore = document.querySelectorAll(".high-score") 
+//keeps track of User's high score
 
 
 // INITIALIZING GAME //
+//pertain to startGame function//
 function(startGame) { 
     //function to activate game.
-    }
+//* Was thinking that this function can include all question and answer if/else statements (instead of in html??) //
+    when startButton is pressed
+    then a countdownTimer starts backwards from 60 seconds
 
 
-addEventListener(visibility)
-//* for hiding buttons on click //
-//* for showing buttons on click //
-//?Should this be a keydown method instead? //
-
-alert("Quiz complete!": timerReset) //make sure code is good
-prompt("Please enters your initials": highScore) //make sure code is good
+    when startButton is pressed
+    then a random question with 4 multiple choice answ appear
 
 
+    when correctAnswer is Clicked
+    the answer button will turn green
+    AND
+    a new question will apear
 
 
+    If incorrectAnswer is Clicked
+    the answerButton will turn red
+    AND
+    time will continue to disappear but NO new question will be given
 
-function(playingGame) {
-    //function for things to happen while playing
+
+    When all questions have been exhausted
+    then an Alert will inform you that the quiz is complete
+    AND
+    a prompt will ask user to input initials
+
+
+    When all the questions have been exhaused
+    then the countDown timer will remain at 0 seconds
+
+alert("Quiz complete!": timerReset)
+//make sure code is good
+prompt("Please enters your initials": highScore)
+//make sure code is good
+
+addEventListener(startButtonClicked)
+    //!This needs to induce a countDown to begin//
+addEventListener(visibilityOn)
+    //* for showing buttons on click //
+    //?Is this needed?????//
+addEventListener(visibilityOff)
+    //!This is to hide startButton on Click //
+    //?Should this be a keydown method instead? //
+addEventListener(correctAnswerClicked)
+    //!This needs to turn the button green AND load next question//
+addEventListener(incorrectAnswerClicked)
+    //!This needs to turn the button red and NOT load next question but keep timer going//
+
 }
-//? Is this necessary? was thinking that if this function were here, then all question and answer if/else statements could be included in this function //
+
+
+
+
+//pertains to playingGame//
+function(endGame) {
+    //function for things to happen after finishing game
+
+
+function(highScore) {
+    //keeps record high score
+    //? Does this go in playAgain?? //
+    //? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
+}
+
+function(tracker) { 
+    //keeps record of wins and losses
+     //? Does this go in playAgain?? //
+     //? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
+}
+}
+
 
 function(playAgain) {
     //function to play again and reset timer
+
+    addEventListener(playAgainClicked)
+//!This needs to restart the game and run all the timer functions again//
 }
 
-//? Can this go in playingGame?? //
-function(highScore) { 
-    //keeps record high score
-}
 
-//? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
-function(tracker) { 
-    //keeps record of wins and losses
-}
 
-//? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
+
+
+
+
 
 
 
