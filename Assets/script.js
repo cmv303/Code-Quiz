@@ -1,21 +1,55 @@
-console.log("hi Hi HI") 
+console.log("hi Hi HI")
 //tests to see if everything works. Yes it does
+const questions = [
+    {
+    question: "Commonly used data types do NOT include ____.",
+    answers: {
+        a: 'strings',
+        b: 'booleans',
+        c: 'alerts',
+        d: 'numbers',
+    },
+    correctAnswer: 'c'
+    },
+    {
+    question: "The condition in an if/else statement is enclosed with _____.",
+    answers: {
+        a: 'quotes',
+        b: 'curly brackets',
+        c: 'parenthesis',
+        d: 'square brackets',
+    },
+    correctAnswer: 'c'
+    },
+    {
+        question: "Arrays in JavaScript can be used to store ____.",
+        answers: {
+            a: 'numbers and strings',
+            b: 'other arrays',
+            c: 'booleans',
+            d: 'all of the above',
+        },
+        correctAnswer: 'd'
+    },
+    {
+        queston: "String values must be enclosed within _____ when being assigned to variables.",
+        answers: {
+            a: 'commas',
+            b: 'curly brackets',
+            c: 'quotes',
+            d: 'parenthesis',
+        },
+        correctAnswer: 'c'
+    }
+]
 
+const quizContainer = document.getElementsByClassName("quiz-container");
 const startGame = document.querySelectorAll(".start-btn")
-
-const question = document.getElementById("question-prompt");
-const currentQuestion
-//? is this necesssary, or is const question enough?// //
-//*This should be enough if all questions are placed here in an array//
-const rndQueston
-//?This const rndQuestion may not be necessary if I do the array above. Have to see....//
-
 const answers = Array.from(document.querySelectorAll(".ans-btn"));
 console.log(answers); //checks to make sure it's working
 const correctAnswer
 const incorrectAnswer
 //? is this necessary, or is const answers enough? or, should i change const answers to const possibleAnswers ? //
-
 const countDown = document.querySelectorAll(".timer")
 //countsdown from 1 minute at start of game
 const timerReset
@@ -29,37 +63,63 @@ const highScore = document.querySelectorAll(".high-score")
 
 // INITIALIZING GAME //
 //pertain to startGame function//
-function(startGame) { 
-    //function to activate game.
-//* Was thinking that this function can include all question and answer if/else statements (instead of in html??) //
-    when startButton is pressed
-    then a countdownTimer starts backwards from 60 seconds
+ //function to activate game.
+function startGame(allQuestions, quizContainer, resultsContainer,submitButton){
+//Was thinking that this function can include all question and answer if/else statements (instead of in html??)//
+    function currentQuestion(allQuestions, quizContainer) {
+        let indQuestion = [];
+        let answers;
+
+        for(var i=0; i<allQuestions.length; i++){
+            answers = [];
+        for(options in allQuestions[i].answers){
+            answers.push(
+            '<label>'
+                + '<input type="radio" name="question'+i+'" value="'+options+'">'
+                + options + ': '
+                + questions[i].answers[options]
+            + '</label>'
+            );
+        }
+        indQuestion.push(
+            '<section id="quesion-prompt">' +
+        allQuestions[i].currentQuestion + '</section>'
+            + '<section id="answer-choices">' +
+        answers.join('') + '</section>'
+        );
+        }
+            quizContainer.innerHTML =
+        output.join('');
+    }
+    // when startButton is pressed
+    // then a countdownTimer starts backwards from 60 seconds
 
 
-    when startButton is pressed
-    then a random question with 4 multiple choice answ appear
+    // when startButton is pressed
+    // then a random question with 4 multiple choice answ appear
 
 
-    when correctAnswer is Clicked
-    the answer button will turn green
-    AND
-    a new question will apear
+    // when correctAnswer is Clicked
+    // the answer button will turn green
+    // AND
+    // a new question will apear
 
 
-    If incorrectAnswer is Clicked
-    the answerButton will turn red
-    AND
-    time will continue to disappear but NO new question will be given
+    // If incorrectAnswer is Clicked
+    // the answerButton will turn red
+    // AND
+    // time will continue to disappear but NO new question will be given
 
 
-    When all questions have been exhausted
-    then an Alert will inform you that the quiz is complete
-    AND
-    a prompt will ask user to input initials
+    // When all questions have been exhausted
+    // then an Alert will inform you that the quiz is complete
+    // AND
+    // a prompt will ask user to input initials
 
 
-    When all the questions have been exhaused
-    then the countDown timer will remain at 0 seconds
+    // When all the questions have been exhaused
+    // then the countDown timer will remain at 0 seconds
+    
 
 alert("Quiz complete!": timerReset)
 //make sure code is good
