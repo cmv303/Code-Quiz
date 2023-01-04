@@ -1,5 +1,4 @@
-console.log("hi Hi HI")
-//tests to see if everything works. Yes it does
+//variables
 const questions = [
     {
     question: "Commonly used data types do NOT include ____.",
@@ -42,30 +41,11 @@ const questions = [
         correctAnswer: 'c'
     }
 ]
-
 const quizContainer = document.getElementsByClassName("quiz-container");
 const startGame = document.querySelectorAll(".start-btn")
-const answers = Array.from(document.querySelectorAll(".ans-btn"));
-console.log(answers); //checks to make sure it's working
-const correctAnswer
-const incorrectAnswer
-//? is this necessary, or is const answers enough? or, should i change const answers to const possibleAnswers ? //
-const countDown = document.querySelectorAll(".timer")
-//countsdown from 1 minute at start of game
-const timerReset
-//resets if Play Again is activated
-//*this will be declared within function //
-const tracker = document.querySelectorAll(".tracker")
-//keeps track of # of wins and losses
-const highScore = document.querySelectorAll(".high-score") 
-//keeps track of User's high score
-
 
 // INITIALIZING GAME //
-//pertain to startGame function//
- //function to activate game.
 function startGame(allQuestions, quizContainer, resultsContainer,submitButton){
-//Was thinking that this function can include all question and answer if/else statements (instead of in html??)//
     function currentQuestion(allQuestions, quizContainer) {
         let indQuestion = [];
         let answers;
@@ -91,6 +71,42 @@ function startGame(allQuestions, quizContainer, resultsContainer,submitButton){
             quizContainer.innerHTML =
         output.join('');
     }
+    function endGame(allQuestions, quizContainer, resultsContainer) {
+        const possibleAnswers = quizContainer.querySelectorAll('#answer-choices');
+
+        //tracker
+        const userChoice = '';
+        const wereTheyCorrect = 0;
+
+        for(var i=0; i<allQuestions.length; i++){
+            userChoice = (possibleAnswers[i].querySelector('input[name=allQuestions'+i+']:checked')||{}).value;
+
+        if(userChoice===allQuestions[i].correctAnswer){
+            wereTheyCorrect++;
+        }
+
+        resultsContainer.innerHTML =
+        wereTheyCorrect + ' out of ' +
+        allQuestions.length;
+            }
+
+        startGame(allQuestions, quizContainer);
+
+        submitButton.onclick = function() {
+            endGame(allQuestions, quizContainer, resultsContainer);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    //function for things to happen after finishing game
     // when startButton is pressed
     // then a countdownTimer starts backwards from 60 seconds
 
@@ -121,23 +137,38 @@ function startGame(allQuestions, quizContainer, resultsContainer,submitButton){
     // then the countDown timer will remain at 0 seconds
     
 
-alert("Quiz complete!": timerReset)
-//make sure code is good
-prompt("Please enters your initials": highScore)
-//make sure code is good
 
-addEventListener(startButtonClicked)
-    //!This needs to induce a countDown to begin//
-addEventListener(visibilityOn)
-    //* for showing buttons on click //
-    //?Is this needed?????//
-addEventListener(visibilityOff)
-    //!This is to hide startButton on Click //
-    //?Should this be a keydown method instead? //
-addEventListener(correctAnswerClicked)
-    //!This needs to turn the button green AND load next question//
-addEventListener(incorrectAnswerClicked)
-    //!This needs to turn the button red and NOT load next question but keep timer going//
+
+
+
+    // const answers = Array.from(document.querySelectorAll(".ans-btn"));
+// console.log(answers); //checks to make sure it's working
+// //? is this necessary, or is const answers enough? or, should i change const answers to const possibleAnswers ? //
+// const countDown = document.querySelectorAll(".timer")
+// //countsdown from 1 minute at start of game
+// //resets if Play Again is activated
+// //*this will be declared within function //
+// const tracker = document.querySelectorAll(".tracker")
+// //keeps track of # of wins and losses
+// const highScore = document.querySelectorAll(".high-score") 
+// //keeps track of User's high score
+// alert("Quiz complete!": timerReset)
+    //make sure code is good
+// prompt("Please enters your initials": highScore)
+    //make sure code is good
+
+// addEventListener(startButtonClicked)
+        //!This needs to induce a countDown to begin//
+// addEventListener(visibilityOn)
+        //* for showing buttons on click //
+        //?Is this needed?????//
+// addEventListener(visibilityOff)
+        //!This is to hide startButton on Click //
+        //?Should this be a keydown method instead? //
+// addEventListener(correctAnswerClicked)
+        //!This needs to turn the button green AND load next question//
+// addEventListener(incorrectAnswerClicked)
+        //!This needs to turn the button red and NOT load next question but keep timer going//
 
 }
 
@@ -145,30 +176,25 @@ addEventListener(incorrectAnswerClicked)
 
 
 //pertains to playingGame//
-function(endGame) {
-    //function for things to happen after finishing game
 
 
-function(highScore) {
-    //keeps record high score
-    //? Does this go in playAgain?? //
-    //? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
-}
 
-function(tracker) { 
-    //keeps record of wins and losses
-     //? Does this go in playAgain?? //
-     //? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
-}
-}
+// function(highScore) {
+//     //keeps record high score
+//     //? Does this go in playAgain?? //
+//     //? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
+// }
 
 
-function(playAgain) {
-    //function to play again and reset timer
 
-    addEventListener(playAgainClicked)
-//!This needs to restart the game and run all the timer functions again//
-}
+
+
+// function(playAgain) {
+//     //function to play again and reset timer
+
+//     addEventListener(playAgainClicked)
+// //!This needs to restart the game and run all the timer functions again//
+// }
 
 
 
