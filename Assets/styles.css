@@ -28,7 +28,7 @@ body {
 }
 
 /* Main */
-.wrapper {
+.timer {
   /* ! not working */
   background-color: rgb(221, 211, 198);
   border-radius: 5px;
@@ -55,10 +55,15 @@ body {
   width: 100vh;
 }
 
-p {
-   /*! need to figure out how 2 turn into rows */
-  margin: 1em;
+#btn-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+  /*! need to figure out how 2 turn into rows */
+/* p {
+  margin: 1em;
+} */
 
 /* Buttons */
 .btn {
@@ -81,32 +86,23 @@ p {
 
 } */
 
-/* .utlity-buttons {
-  margin: 3rem;
-  padding: 3rem;
-} */
 
-/* .start-btn {
- 
-} */
+/* #start-btn {} */
 
-/* .next-btn {
- 
-} */
+/* #next-btn {} */
+
+/* #restart-btn {} */
 
 /* Show + Hide */
 
-/* .hide-next {
+/* #hide-next {
  
 } */
 
-/* .hide-start {
+/* #hide-start {
     display: none;
 } */
 
-/* .hide-question {
-    display: none;
-} */
 
 
 

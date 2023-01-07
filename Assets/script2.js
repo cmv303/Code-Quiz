@@ -85,30 +85,30 @@ addEventListener(incorrectAnswerClicked)
 
 
 //pertains to playingGame//
-function(endGame) {
-    //function for things to happen after finishing game
+// function(endGame) {
+//     //function for things to happen after finishing game
 
 
-function(highScore) {
-    //keeps record high score
-    //? Does this go in playAgain?? //
-    //? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
-}
+// function(highScore) {
+//     //keeps record high score
+//     //? Does this go in playAgain?? //
+//     //? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
+// }
 
-function(tracker) { 
-    //keeps record of wins and losses
-     //? Does this go in playAgain?? //
-     //? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
-}
-}
+// function(tracker) { 
+//     //keeps record of wins and losses
+//      //? Does this go in playAgain?? //
+//      //? Is this a function, or more of an addEvent and/or localstorage situation? Maybe ONE function(endGame) could suffice//
+// }
+// }
 
 
-function(playAgain) {
-    //function to play again and reset timer
+// function(playAgain) {
+//     //function to play again and reset timer
 
-    addEventListener(playAgainClicked)
-//!This needs to restart the game and run all the timer functions again//
-}
+//     addEventListener(playAgainClicked)
+// //!This needs to restart the game and run all the timer functions again//
+// }
 
 
 
