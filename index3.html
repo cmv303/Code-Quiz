@@ -14,19 +14,17 @@
     <aside>
       <h3 class="timer">Time Left</h3>
     </aside>
-    <section class="quiz-container" id="quiz-shell">
-      <div class="quizQuestions" id="a"></div>
-      <div class="quizQuestions" id="b"></div>
-      <div class="quizQuestions" id="c"></div>
-      <div class="quizQuestions" id="d"></div>
-    </section>
-    <section id="btn-shell">
-    <button type="button" class="btn" id="start-btn hide-start">Start</button>
-    <button type="button" class="btn" id="next-btn hide-next">Next</button>
-    <button type="button" class="btn" id="restart-btn">Restart Game</button>
-</section>
-    <section class="quizResults" id="quizScore">
-    </section>
+      <section class="quiz-container start-container" id="quiz-shell">
+        <h3 class="question" id="question"></h3>
+        <div class="answerChoices" id="answerChoices"></div>
+      </section>
+      <section class="btn-shell">
+        <button type="button" class="btn hide" id="start-btn">Start</button>
+        <button type="button" class="btn" id="next-btn">Next</button>
+        <button type="button" class="btn" id="restart-btn">Restart Game</button>
+      </section>
+    </main>
+    <section class="quizResults" id="quizScore"></section>
   </body>
 
   <script src="./Assets/script3.js"></script>
