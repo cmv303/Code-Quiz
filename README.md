@@ -26,7 +26,7 @@ You have the option to Replay the Quiz if you'd like!
 ## Deployment
 
 To get to deployed site, click here:
-
+https://cmv303.github.io/Code-Quiz/
 
 ## License
 Please refer to license in Repo.
