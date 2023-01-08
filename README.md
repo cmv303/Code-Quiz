@@ -23,6 +23,8 @@ You have the option to Replay the Quiz if you'd like!
 
 <img width="1406" alt="Screenshot 2023-01-07 at 9 33 24 PM" src="https://user-images.githubusercontent.com/115678318/211178183-0fe77c51-d1ee-415f-ba9b-6fb14c4b5e02.png">
 
+<img width="1081" alt="Screenshot 2023-01-07 at 10 01 16 PM" src="https://user-images.githubusercontent.com/115678318/211178584-3886381a-cf4f-4459-9407-92d39866fdf2.png">
+
 ## Deployment
 
 To get to deployed site, click here:
